@@ -22,13 +22,17 @@ function startGame(e){
 
 function handleWinner(e,rand){
     console.log(rand);
-    if(rand === 0){
-        console.log("kameen");
+    console.log(e.target.alt);
+    if(e.target.alt === "rock" && rand === 0){
+        console.log("nereseno");
+        return;
     }
-    if (rand === 1) {
-        console.log("papirrr");
+    if (e.target.alt === "paper" && rand === 0) {
+        console.log("you are winner");
+        return;
     }
-    if (rand === 2) {
-        console.log("makazeee");
+    if (e.target.alt === "scissors" && rand === 0) {
+        console.log("compuer winned");
+        return;
     }
 }
